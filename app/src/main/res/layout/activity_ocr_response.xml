@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tvOcrResponseTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp"
+        android:paddingHorizontal="24dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:text="@string/tv_ocr_response_title"/>
+
+    <TextView
+        android:id="@+id/tvOcrResponse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tvOcrResponseTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:paddingHorizontal="24dp"
+        android:textSize="18sp"
+        tools:text="respuesta / ocr/ 88437 / etc...respuesta / ocr/ 88437 / etc..."/>
+
+    <TextView
+        android:id="@+id/tvOcrResponseFilteredTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tvOcrResponse"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="64dp"
+        android:paddingHorizontal="24dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:text="@string/tv_ocr_response_filtered_title"/>
+
+    <TextView
+        android:id="@+id/tvOcrResponseFiltered"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tvOcrResponseFilteredTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:paddingHorizontal="24dp"
+        android:textSize="18sp"
+        tools:text="Mi código"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

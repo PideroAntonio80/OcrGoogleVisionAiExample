@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">OcrGoogleVisionAiExample</string>
+    <string name="tv_ocr_response_title">LECTURA OCR COMPLETA</string>
+    <string name="tv_ocr_response_filtered_title">LECTURA OCR FILTRADA</string>
+</resources>
