@@ -11,7 +11,6 @@ import java.util.regex.Pattern;
 public class OcrResponseActivity extends AppCompatActivity {
 
     private String myOcrResponse;
-    private String myOcrResponseFiltered;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,20 +31,6 @@ public class OcrResponseActivity extends AppCompatActivity {
 
         ocrResponse.setText(myOcrResponse);
         ocrResponseFiltered.setText(searchPattern(myOcrResponse));
-
-//        String[] ocrResponseArray = myOcrResponse.split("/");
-//
-//        for (String s : ocrResponseArray) {
-//            if (s.toLowerCase().contains("comercio") || s.toLowerCase().contains("conercio")) {
-//                myOcrResponseFiltered = s.substring(9);
-//            }
-//        }
-//
-//        if (myOcrResponseFiltered != null && !myOcrResponseFiltered.isEmpty()) {
-//            ocrResponseFiltered.setText(myOcrResponseFiltered);
-//        } else {
-//            ocrResponseFiltered.setText("No se encuentra ese campo en la lectura OCR");
-//        }
     }
 
     public static String searchPattern(String input) {
@@ -54,21 +39,9 @@ public class OcrResponseActivity extends AppCompatActivity {
         Matcher matcher = pattern.matcher(input);
 
         if (matcher.find()) {
-            return matcher.group(1); // Retorna solo el grupo 1
+            return matcher.group(1);
         } else {
-            return "No se encontró el patrón.";
+            return "No se encuentra ese campo en la lectura OCR";
         }
     }
-
-//    public static String buscarPatron(String input) {
-//        String patron = "C[0O][MN][3E][RPF]C[I1][0O][.,;:]\\s*";
-//        Pattern pattern = Pattern.compile(patron);
-//        Matcher matcher = pattern.matcher(input);
-//
-//        if (matcher.find()) {
-//            return matcher.group();
-//        } else {
-//            return "No se encontró el patrón.";
-//        }
-//    }
 }

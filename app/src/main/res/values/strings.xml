@@ -2,4 +2,6 @@
     <string name="app_name">OcrGoogleVisionAiExample</string>
     <string name="tv_ocr_response_title">LECTURA OCR COMPLETA</string>
     <string name="tv_ocr_response_filtered_title">LECTURA OCR FILTRADA</string>
+
+    <string name="content_description_image_view_desc">Descripción de la imagen</string>
 </resources>

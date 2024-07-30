@@ -1,23 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".MainActivity">
 
-    <SurfaceView
-        android:id="@+id/surfaceView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/bCamera"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="8dp"
+        android:contentDescription="@string/content_description_image_view_desc"
+        tools:src="@drawable/ic_launcher_background"
+        android:scaleType="centerCrop" />
 
     <Button
-        android:id="@+id/btnCapture"
+        android:id="@+id/bCamera"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="16dp"
-        android:text="Lectura OCR" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/bGallery"
+        android:layout_marginVertical="16dp"
+        android:text="Cámara" />
 
-</RelativeLayout>
+    <Button
+        android:id="@+id/bGallery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/bCamera"
+        app:layout_constraintBottom_toBottomOf="@+id/bCamera"
+        app:layout_constraintStart_toEndOf="@+id/bCamera"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginVertical="16dp"
+        android:text="Galería" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
