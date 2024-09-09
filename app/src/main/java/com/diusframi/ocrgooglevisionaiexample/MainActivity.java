@@ -1,5 +1,7 @@
 package com.diusframi.ocrgooglevisionaiexample;
 
+import static com.diusframi.ocrgooglevisionaiexample.Constants.OCR_RESPONSE_KEY;
+
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -181,7 +183,7 @@ public class MainActivity extends AppCompatActivity {
         String filteredText = stringBuilder.toString();
 
         Intent intent = new Intent(MainActivity.this, OcrResponseActivity.class);
-        intent.putExtra("OCR_RESPONSE_KEY", filteredText);
+        intent.putExtra(OCR_RESPONSE_KEY, filteredText);
         startActivity(intent);
     }
 }
